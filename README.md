@@ -12,11 +12,11 @@ Text segment contains machine code of the compiled program. Usually, the text se
 
 2. Initialized Data Segment :-
 
-Initialized data stores all 'global', 'static', 'constant', and external variables (declared with '<extern>' keyword) that are initialized beforehand. Data segment is not read-only, since the values of the variables can be altered at run time.
+Initialized data stores all `global`, `static`, `constant`, and external variables (declared with `extern` keyword) that are initialized beforehand. Data segment is not read-only, since the values of the variables can be altered at run time.
 
 This segment can be further classified into initialized read-only area and initialized read-write area.
 
-'''
+```
 #include <stdio.h>
 
 char c[]="rishabh tripathi";     /*  global variable stored in Initialized Data Segment in read-write area*/
@@ -27,13 +27,13 @@ int main()
     static int i=11;          /* static variable stored in Initialized Data Segment*/
     return 0;
 }
-'''
+```
 
 3. Uninitialized Data Segment (bss) :-
 
-Data in this segment is initialized to arithmetic 0 before the program starts executing. Uninitialized data starts at the end of the data segment and contains all global variables and static variables that are initialized to 0 or do not have explicit initialization in source code.
+Data in this segment is initialized to arithmetic 0 before the program starts executing. Uninitialized data starts at the end of the data segment and contains all `global` variables and `static` variables that are initialized to 0 or do not have explicit initialization in source code.
 
-'''
+```
 #include <stdio.h>
 
 char c;               /* Uninitialized variable stored in bss*/
@@ -43,20 +43,20 @@ int main()
     static int i;     /* Uninitialized static variable stored in bss */
     return 0;
 }
-'''
+```
 
 4. Heap :-
 
-Heap is the segment where dynamic memory allocation usually takes place. When some more memory need to be allocated using malloc and calloc function, heap grows upward. The Heap area is shared by all shared libraries and dynamically loaded modules in a process.
+Heap is the segment where dynamic memory allocation usually takes place. When some more memory need to be allocated using `malloc` and `calloc` function, heap grows upward. The Heap area is shared by all shared libraries and dynamically loaded modules in a process.
 
-'''
+```
 #include <stdio.h>
 int main()
 {
     char *p=(char*)malloc(sizeof(char));    /* memory allocating in heap segment */
     return 0;
 }
-'''
+```
 
 5. Stack :-
 
