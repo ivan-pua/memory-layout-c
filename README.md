@@ -12,6 +12,6 @@ Text segment contains machine code of the compiled program. Usually, the text se
 
 2. Initialized Data Segment :-
 
-Initialized data stores all <global>, <static>, <constant>, and external variables (declared with <extern> keyword) that are initialized beforehand. Data segment is not read-only, since the values of the variables can be altered at run time.
+Initialized data stores all '<global>', '<static>', '<constant>', and external variables (declared with '<extern>' keyword) that are initialized beforehand. Data segment is not read-only, since the values of the variables can be altered at run time.
 
 This segment can be further classified into initialized read-only area and initialized read-write area.
